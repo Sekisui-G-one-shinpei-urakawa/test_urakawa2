@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0"
+    xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+    xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+    xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:Reference Uri="http://jggs4hanaap:8000/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='LOCAL')/$value"
+        xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="http://jggs4hanaap:8000/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CAPABILITIES',Version='0001',SAP__Origin='LOCAL')/$value"
+        xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Capabilities.V1" Alias="Capabilities"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="http://jggs4hanaap:8000/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='LOCAL')/$value"
+        xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="http://jggs4hanaap:8000/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_AGGREGATION',Version='0001',SAP__Origin='LOCAL')/$value"
+        xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Aggregation.V1" Alias="Aggregation"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="http://jggs4hanaap:8000/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_PERSONALDATA',Version='0001',SAP__Origin='LOCAL')/$value"
+        xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.PersonalData.v1" Alias="PersonalData"/>
+    </edmx:Reference>
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="ZFJAPP38_ODSK003_SRV" xml:lang="en" sap:schema-version="1"
+            xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="I_AccountingDocumentTypeStdVHType" sap:label="Journal Entry Type" sap:value-list="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="AccountingDocumentType"/>
+                </Key>
+                <Property Name="AccountingDocumentType" Type="Edm.String" Nullable="false" MaxLength="2" sap:display-format="UpperCase" sap:text="AccountingDocumentType_Text" sap:label="Journal Entry Type"/>
+                <Property Name="AccountingDocumentType_Text" Type="Edm.String" MaxLength="20" sap:label="JE Type Name" sap:quickinfo="Document Type Name" sap:creatable="false" sap:updatable="false"/>
+            </EntityType>
+            <EntityType Name="I_CompanyCodeStdVHType" sap:label="Company Code" sap:value-list="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="CompanyCode"/>
+                </Key>
+                <Property Name="CompanyCode" Type="Edm.String" Nullable="false" MaxLength="4" sap:display-format="UpperCase" sap:text="CompanyCodeName" sap:label="Company Code"/>
+                <Property Name="CompanyCodeName" Type="Edm.String" MaxLength="25" sap:label="Company Name" sap:quickinfo="Name of Company Code or Company"/>
+            </EntityType>
+            <EntityType Name="I_FinancialAccountTypeStdVHType" sap:label="Financial Account Type" sap:value-list="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="FinancialAccountType"/>
+                </Key>
+                <Property Name="FinancialAccountType" Type="Edm.String" Nullable="false" MaxLength="1" sap:display-format="UpperCase" sap:text="FinancialAccountType_Text" sap:label="Account Type"/>
+                <Property Name="FinancialAccountType_Text" Type="Edm.String" MaxLength="60" sap:label="FinAccTypeName" sap:quickinfo="Financial Account Type Name" sap:creatable="false" sap:updatable="false"/>
+            </EntityType>
+            <EntityType Name="I_GLAcctInChtOfAcctsStdVHType" sap:label="G/L Account In Chart Of Accounts" sap:value-list="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="ChartOfAccounts"/>
+                    <PropertyRef Name="GLAccount"/>
+                </Key>
+                <Property Name="ChartOfAccounts" Type="Edm.String" Nullable="false" MaxLength="4" sap:display-format="UpperCase" sap:label="Chart of Accounts"/>
+                <Property Name="GLAccount" Type="Edm.String" Nullable="false" MaxLength="10" sap:display-format="UpperCase" sap:text="GLAccount_Text" sap:label="G/L Account" sap:quickinfo="G/L Account Number"/>
+                <Property Name="GLAccount_Text" Type="Edm.String" MaxLength="20" sap:label="Short Text" sap:quickinfo="G/L account short text" sap:creatable="false" sap:updatable="false"/>
+            </EntityType>
+            <EntityType Name="I_Supplier_VHType" sap:label="Value Help for Supplier" sap:value-list="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Supplier"/>
+                </Key>
+                <Property Name="Supplier" Type="Edm.String" Nullable="false" MaxLength="10" sap:display-format="UpperCase" sap:text="SupplierName" sap:label="Vendor" sap:quickinfo="Account Number of Vendor or Creditor"/>
+                <Property Name="SupplierName" Type="Edm.String" MaxLength="35" sap:label="Name" sap:quickinfo="Name 1"/>
+                <Property Name="AuthorizationGroup" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Authorization" sap:quickinfo="Authorization Group"/>
+                <Property Name="SupplierAccountGroup" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Account group" sap:quickinfo="Vendor account group"/>
+                <Property Name="IsBusinessPurposeCompleted" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Purpose Completed" sap:quickinfo="Business Purpose Completed Flag"/>
+            </EntityType>
+            <EntityType Name="ZFJAPP38_CDS007Type" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Companycode"/>
+                    <PropertyRef Name="Fiscalyear"/>
+                    <PropertyRef Name="Accountingdocument"/>
+                    <PropertyRef Name="Accountingdocumentitem"/>
+                </Key>
+                <Property Name="Companycode" Type="Edm.String" Nullable="false" MaxLength="4" sap:display-format="UpperCase" sap:label="Company Code" sap:value-list="standard"/>
+                <Property Name="Fiscalyear" Type="Edm.String" Nullable="false" MaxLength="4" sap:display-format="NonNegative" sap:label="Fiscal Year"/>
+                <Property Name="Accountingdocument" Type="Edm.String" Nullable="false" MaxLength="10" sap:display-format="UpperCase" sap:label="Journal Entry"/>
+                <Property Name="Accountingdocumentitem" Type="Edm.String" Nullable="false" MaxLength="3" sap:display-format="NonNegative" sap:label="Posting View Item" sap:quickinfo="Journal Entry Posting View Item"/>
+                <Property Name="Documentdate" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Journal Entry Date"/>
+                <Property Name="Postingdate" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Posting Date"/>
+                <Property Name="Accountingdocumentcreationdate" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Entered On" sap:quickinfo="Accounting Document Entry Date"/>
+                <Property Name="Creationtime" Type="Edm.Time" Precision="0" sap:label="Creation Time"/>
+                <Property Name="Accountingdocumenttype" Type="Edm.String" MaxLength="2" sap:display-format="UpperCase" sap:label="Journal Entry Type" sap:value-list="standard"/>
+                <Property Name="Postingkey" Type="Edm.String" MaxLength="2" sap:display-format="UpperCase" sap:label="Posting Key"/>
+                <Property Name="Glaccount" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="G/L Account" sap:value-list="standard"/>
+                <Property Name="Supplier" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Supplier" sap:value-list="standard"/>
+                <Property Name="Financialaccounttype" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Account Type" sap:value-list="standard"/>
+                <Property Name="Transactioncurrency" Type="Edm.String" MaxLength="5" sap:label="Currency" sap:quickinfo="Currency Key" sap:semantics="currency-code"/>
+                <Property Name="Companycodecurrency" Type="Edm.String" MaxLength="5" sap:label="Company Code Crcy" sap:quickinfo="Company Code Currency" sap:semantics="currency-code"/>
+                <Property Name="Amountintransactioncurrency" Type="Edm.Decimal" Precision="24" Scale="3" sap:unit="Transactioncurrency" sap:label="Amount in Trans Crcy" sap:quickinfo="Amount in Transaction Currency"/>
+                <Property Name="Amountincompanycodecurrency" Type="Edm.Decimal" Precision="24" Scale="3" sap:unit="Companycodecurrency" sap:label="Amount in CC Crcy" sap:quickinfo="Amount in Company Code Currency"/>
+                <Property Name="Documentitemtext" Type="Edm.String" MaxLength="50" sap:label="Text" sap:quickinfo="Item Text"/>
+                <Property Name="Paymentmethod" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Payment Method"/>
+                <Property Name="Duecalculationbasedate" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Due Calculation Base Date"/>
+                <Property Name="Duecalculationbasedate_Open" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label=""/>
+            </EntityType>
+            <EntityContainer Name="ZFJAPP38_ODSK003_SRV_Entities" m:IsDefaultEntityContainer="true" sap:message-scope-supported="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="I_AccountingDocumentTypeStdVH" EntityType="ZFJAPP38_ODSK003_SRV.I_AccountingDocumentTypeStdVHType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:content-version="1"/>
+                <EntitySet Name="I_CompanyCodeStdVH" EntityType="ZFJAPP38_ODSK003_SRV.I_CompanyCodeStdVHType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:content-version="1"/>
+                <EntitySet Name="I_FinancialAccountTypeStdVH" EntityType="ZFJAPP38_ODSK003_SRV.I_FinancialAccountTypeStdVHType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="I_GLAcctInChtOfAcctsStdVH" EntityType="ZFJAPP38_ODSK003_SRV.I_GLAcctInChtOfAcctsStdVHType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="I_Supplier_VH" EntityType="ZFJAPP38_ODSK003_SRV.I_Supplier_VHType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:content-version="1"/>
+                <EntitySet Name="ZFJAPP38_CDS007" EntityType="ZFJAPP38_ODSK003_SRV.ZFJAPP38_CDS007Type" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+            </EntityContainer>
+            <Annotations Target="ZFJAPP38_ODSK003_SRV.ZFJAPP38_CDS007Type/Companycode"
+                xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="Company Code"/>
+                        <PropertyValue Property="CollectionPath" String="I_CompanyCodeStdVH"/>
+                        <PropertyValue Property="SearchSupported" Bool="true"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="Companycode"/>
+                                    <PropertyValue Property="ValueListProperty" String="CompanyCode"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="CompanyCodeName"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZFJAPP38_ODSK003_SRV.ZFJAPP38_CDS007Type/Accountingdocumenttype"
+                xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="Journal Entry Type"/>
+                        <PropertyValue Property="CollectionPath" String="I_AccountingDocumentTypeStdVH"/>
+                        <PropertyValue Property="SearchSupported" Bool="true"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="Accountingdocumenttype"/>
+                                    <PropertyValue Property="ValueListProperty" String="AccountingDocumentType"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="AccountingDocumentType_Text"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZFJAPP38_ODSK003_SRV.ZFJAPP38_CDS007Type/Glaccount"
+                xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="G/L Account In Chart Of Accounts"/>
+                        <PropertyValue Property="CollectionPath" String="I_GLAcctInChtOfAcctsStdVH"/>
+                        <PropertyValue Property="SearchSupported" Bool="false"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="ChartOfAccounts"/>
+                                    <PropertyValue Property="ValueListProperty" String="ChartOfAccounts"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="Glaccount"/>
+                                    <PropertyValue Property="ValueListProperty" String="GLAccount"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="GLAccount_Text"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZFJAPP38_ODSK003_SRV.ZFJAPP38_CDS007Type/Supplier"
+                xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="Value Help for Supplier"/>
+                        <PropertyValue Property="CollectionPath" String="I_Supplier_VH"/>
+                        <PropertyValue Property="SearchSupported" Bool="true"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="Supplier"/>
+                                    <PropertyValue Property="ValueListProperty" String="Supplier"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="SupplierName"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="AuthorizationGroup"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="SupplierAccountGroup"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="IsBusinessPurposeCompleted"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZFJAPP38_ODSK003_SRV.ZFJAPP38_CDS007Type/Financialaccounttype"
+                xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="Financial Account Type"/>
+                        <PropertyValue Property="CollectionPath" String="I_FinancialAccountTypeStdVH"/>
+                        <PropertyValue Property="SearchSupported" Bool="false"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="Financialaccounttype"/>
+                                    <PropertyValue Property="ValueListProperty" String="FinancialAccountType"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="FinancialAccountType_Text"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZFJAPP38_ODSK003_SRV.ZFJAPP38_ODSK003_SRV_Entities"
+                xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Aggregation.ApplySupported">
+                    <Record>
+                        <PropertyValue Property="Transformations">
+                            <Collection>
+                                <String>aggregate</String>
+                                <String>groupby</String>
+                                <String>filter</String>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="Rollup" EnumMember="None"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <atom:link rel="self" href="http://jggs4hanaap:8000/sap/opu/odata/sap/ZFJAPP38_ODSK003_SRV/$metadata"
+                xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="latest-version" href="http://jggs4hanaap:8000/sap/opu/odata/sap/ZFJAPP38_ODSK003_SRV/$metadata"
+                xmlns:atom="http://www.w3.org/2005/Atom"/>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

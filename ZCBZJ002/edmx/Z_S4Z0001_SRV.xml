@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="Z_S4Z0001_SRV" xml:lang="en" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <Annotation Term="Core.SchemaVersion" String="1.0.0" xmlns="http://docs.oasis-open.org/odata/ns/edm" />
+            <EntityType Name="PcUpload" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Seqno" />
+                </Key>
+                <Property Name="Seqno" Type="Edm.String" Nullable="false" MaxLength="7" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm001" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm002" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm003" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm004" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm005" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm006" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm007" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm008" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm009" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm010" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm011" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm012" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm013" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm014" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm015" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm016" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm017" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm018" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm019" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm020" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm021" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm022" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm023" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm024" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm025" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm026" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm027" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm028" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm029" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm030" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm031" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm032" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm033" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm034" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm035" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm036" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm037" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm038" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm039" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm040" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm041" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm042" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm043" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm044" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm045" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm046" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm047" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm048" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm049" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm050" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm051" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm052" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm053" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm054" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm055" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm056" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm057" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm058" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm059" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm060" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm061" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm062" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm063" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm064" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm065" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm066" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm067" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm068" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm069" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm070" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm071" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm072" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm073" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm074" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm075" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm076" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm077" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm078" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm079" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm080" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm081" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm082" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm083" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm084" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm085" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm086" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm087" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm088" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm089" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm090" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm091" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm092" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm093" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm094" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm095" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm096" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm097" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm098" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm099" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm100" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm101" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm102" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Comm103" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="MessageType" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Message Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="MessageId" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Message ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="MessageNo" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Message number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="MessageText" Type="Edm.String" Nullable="false" MaxLength="255" sap:unicode="false" sap:label="Message Text" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Out001" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Out002" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Out003" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Out004" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Out005" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="FlgSkip" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            </EntityType>
+            <EntityContainer Name="Z_S4Z0001_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="PcUploadSet" EntityType="Z_S4Z0001_SRV.PcUpload" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+            </EntityContainer>
+            <atom:link rel="self" href="https://ds0onscp:443/sap/opu/odata/sap/Z_S4Z0001_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom" />
+            <atom:link rel="latest-version" href="https://ds0onscp:443/sap/opu/odata/sap/Z_S4Z0001_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom" />
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

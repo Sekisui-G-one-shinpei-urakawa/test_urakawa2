@@ -1,0 +1,10 @@
+---
+spring:
+  datasource:
+    url: "jdbc:sap://1afe5f13-a363-4247-9449-3cc081a61dd4.hana.prod-jp20.hanacloud.ondemand.com:443?encrypt=true&validateCertificate=true&currentschema=SK001"
+    driver-class-name: com.sap.db.jdbc.Driver
+    username: "SK001_81XN5H8SYOBCDUAGW13TLFTFL_RT"
+    password: "Iy6F0Fn2QyJzuUPbKXDvRDqR2p_0EBGvtA2Au6axSY9ow5tghcrexeWclO7IKCuz7PATYl4HUlOSj-ZNqYTk8uoVJdxCDVTyc-gDqVT9ItNJoQw3F5Zri39qekdt3x7g"
+  batch:
+    jdbc:
+      initialize-schema: never

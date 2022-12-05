@@ -1,0 +1,22 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Launch App multi",
+      "request": "launch",
+      "mainClass": "jp.co.sekisui.batch.zcbzj002.App",
+      "projectName": "ZCBZJ002",
+      "envFile": "${workspaceFolder}/.env",
+      "args": [
+        "pid=FI-0030",
+        "vid=VAR-0002",
+        "--spring.profiles.active=default"
+        //        "vid=VAR-0002",
+        //        "onbatch=true"
+      ]
+    }
+  ]
+}

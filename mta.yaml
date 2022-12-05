@@ -1,0 +1,61 @@
+_schema-version: '3.1'
+ID: ZCBZJ002
+version: 1.0.0-SNAPSHOT
+description: "ZCBZJ002 application"
+parameters:
+  enable-parallel-deployments: true
+   
+build-parameters:
+
+modules:
+ # --------------------- SERVER MODULE ------------------------
+ - name: ZCBZJ002
+ # ------------------------------------------------------------
+   type: java
+   path: ZCBZJ002
+   parameters:
+     memory: 768M
+     instances: 0   
+     buildpack: java_buildpack
+   properties:
+#     SPRING_PROFILES_ACTIVE: default
+     SPRING_PROFILES_ACTIVE: cloud
+   build-parameters:
+     builder: custom
+     commands: [ mvn clean package ]
+     build-result: "target/*-SNAPSHOT.[wj]ar"
+   requires:
+    # Resources extracted from CAP configuration
+    - name: ZCIZI000-dest
+    - name: ZCIZI000-conn
+    - name: hdi_sk001_db
+    - name: ZCBZJ002-uaa
+    - name: ZCIZI000-job
+resources:
+ - name: ZCIZI000-dest
+   type: org.cloudfoundry.managed-service
+   parameters:
+     service: destination
+     service-plan: lite
+ - name: ZCIZI000-conn
+   type: org.cloudfoundry.managed-service
+   parameters:
+     service: connectivity
+     service-plan: lite
+ - name: hdi_sk001_db
+   type: com.sap.xs.hdi-container
+   parameters:
+     service: hana  # or 'hanatrial' on trial landscapes
+     service-plan: hdi-shared
+   properties:
+     hdi-service-name: ${service-name}
+ - name: ZCBZJ002-uaa
+   type: org.cloudfoundry.managed-service
+   parameters:
+     service: xsuaa
+     service-plan: application
+ - name: ZCIZI000-job
+   type: org.cloudfoundry.managed-service
+   parameters:
+     service: jobscheduler
+     service-plan: standard

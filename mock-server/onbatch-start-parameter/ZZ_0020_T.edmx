@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+  <edmx:DataServices m:DataServiceVersion="2.0">
+    <Schema Namespace="cloud.sdk.capng" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+      <EntityContainer Name="EntityContainer" m:IsDefaultEntityContainer="true">
+        <EntitySet Name="UploadFileData" EntityType="cloud.sdk.capng.UploadFileData"/>
+        <EntitySet Name="OnBatchStartParameter" EntityType="cloud.sdk.capng.OnBatchStartParameter"/>
+      </EntityContainer>
+      <EntityType Name="UploadFileData">
+        <Key>
+          <PropertyRef Name="JOB_ID"/>
+          <PropertyRef Name="APP_ID"/>
+          <PropertyRef Name="VARIANT_ID"/>
+          <PropertyRef Name="UUID"/>
+          <PropertyRef Name="UPLOAD_ID"/>
+        </Key>
+        <Property Name="JOB_ID" Type="Edm.Int32" Nullable="false"/>
+        <Property Name="APP_ID" Type="Edm.String" MaxLength="100" Nullable="false"/>
+        <Property Name="VARIANT_ID" Type="Edm.String" MaxLength="100" Nullable="false"/>
+        <Property Name="UUID" Type="Edm.String" MaxLength="36" Nullable="false"/>
+        <Property Name="UPLOAD_ID" Type="Edm.String" MaxLength="10" Nullable="false"/>
+        <Property Name="FILENAME" Type="Edm.String" MaxLength="100"/>
+        <Property Name="FILEDATA" Type="Edm.String"/>
+        <Property Name="USERID" Type="Edm.String" MaxLength="64"/>
+        <Property Name="MAILADDRESS" Type="Edm.String" MaxLength="64"/>
+        <Property Name="PARAMID1" Type="Edm.String" MaxLength="100"/>
+        <Property Name="PARAMDATA1" Type="Edm.String" MaxLength="100"/>
+        <Property Name="PARAMID2" Type="Edm.String" MaxLength="100"/>
+        <Property Name="PARAMDATA2" Type="Edm.String" MaxLength="100"/>
+        <Property Name="PARAMID3" Type="Edm.String" MaxLength="100"/>
+        <Property Name="PARAMDATA3" Type="Edm.String" MaxLength="100"/>
+        <Property Name="PARAMID4" Type="Edm.String" MaxLength="100"/>
+        <Property Name="PARAMDATA4" Type="Edm.String" MaxLength="100"/>
+        <Property Name="PARAMID5" Type="Edm.String" MaxLength="100"/>
+        <Property Name="PARAMDATA5" Type="Edm.String" MaxLength="100"/>
+        <Property Name="PARAMID6" Type="Edm.String" MaxLength="100"/>
+        <Property Name="PARAMDATA6" Type="Edm.String" MaxLength="100"/>
+        <Property Name="PARAMID7" Type="Edm.String" MaxLength="100"/>
+        <Property Name="PARAMDATA7" Type="Edm.String" MaxLength="100"/>
+        <Property Name="PARAMID8" Type="Edm.String" MaxLength="100"/>
+        <Property Name="PARAMDATA8" Type="Edm.String" MaxLength="100"/>
+        <Property Name="PARAMID9" Type="Edm.String" MaxLength="100"/>
+        <Property Name="PARAMDATA9" Type="Edm.String" MaxLength="100"/>
+        <Property Name="PARAMID10" Type="Edm.String" MaxLength="100"/>
+        <Property Name="PARAMDATA10" Type="Edm.String" MaxLength="100"/>
+        <Property Name="PARAMCOUNT" Type="Edm.Int32"/>
+      </EntityType>
+      <EntityType Name="OnBatchStartParameter">
+        <Key>
+          <PropertyRef Name="APP_ID"/>
+          <PropertyRef Name="SEQ_NO"/>
+          <PropertyRef Name="FIELD_ID"/>
+          <PropertyRef Name="REQUIRED_FLG"/>
+          <PropertyRef Name="LABEL"/>
+          <PropertyRef Name="HELP_KEY"/>
+        </Key>
+        <Property Name="APP_ID" Type="Edm.String" MaxLength="10" Nullable="false"/>
+        <Property Name="SEQ_NO" Type="Edm.Int32" Nullable="false"/>
+        <Property Name="FIELD_ID" Type="Edm.String" MaxLength="20" Nullable="false"/>
+        <Property Name="REQUIRED_FLG" Type="Edm.String" MaxLength="1" Nullable="false"/>
+        <Property Name="LABEL" Type="Edm.String" MaxLength="30" Nullable="false"/>
+        <Property Name="HELP_KEY" Type="Edm.String" MaxLength="30" Nullable="false"/>
+      </EntityType>
+    </Schema>
+  </edmx:DataServices>
+</edmx:Edmx>

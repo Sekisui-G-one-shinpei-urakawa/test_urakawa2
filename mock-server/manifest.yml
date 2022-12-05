@@ -1,0 +1,7 @@
+---
+applications:
+- name: odata-mock-server
+  memory: 64M
+  buildpacks:
+  - nodejs_buildpack
+  random-route: true

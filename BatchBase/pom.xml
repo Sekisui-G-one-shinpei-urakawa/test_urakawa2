@@ -1,0 +1,43 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>jp.co.sekisui.batch</groupId>
+  <artifactId>BatchBase</artifactId>
+  <packaging>jar</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>BatchBase</name>
+  <url>http://maven.apache.org</url>
+
+    <parent>
+        <groupId>jp.co.sekisui.batch</groupId>
+        <artifactId>batch_multi</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+  <dependencies>
+         <dependency>
+            <groupId>jp.co.sekisui</groupId>
+            <artifactId>common-biz-batch</artifactId>
+            <version>1.0.0</version>
+            <!--
+            <scope>system</scope>
+            <systemPath>${basedir}/lib/common-biz-batch.jar</systemPath>
+            -->
+        </dependency>
+        <dependency>
+            <groupId>io.pivotal.cfenv</groupId>
+            <artifactId>java-cfenv-boot</artifactId>
+            <version>2.4.0</version>
+        </dependency>
+        <dependency>
+            <groupId>io.pivotal.cfenv</groupId>
+            <artifactId>java-cfenv-jdbc</artifactId>
+            <version>2.4.1</version>
+        </dependency>
+        <dependency>
+            <groupId>io.pivotal.cfenv</groupId>
+            <artifactId>java-cfenv</artifactId>
+            <version>2.4.1</version>
+        </dependency>
+  </dependencies>
+</project>
